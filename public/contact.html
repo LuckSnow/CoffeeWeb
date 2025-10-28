@@ -8,16 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">       
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-    
     <link rel="stylesheet" href="../assets/css/contact.css">
 </head>
 <body>
 
     <header class="site-header">
         <div class="logo-container">
-            <a href="#"><h1 class="logo-text">Brothers Cafe</h1></a>
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="Brothers Cafe Logo" class="logo-img">
+                <a href="#"><h1 class="logo-text">Brothers Cafe</h1></a>
+            </div>
         </div>
         <nav class="main-nav">
             <ul>
@@ -38,7 +42,7 @@
 
     <main>
         <section class="page-title">
-            <div class="container">
+            <div class="container slide-left">
                 <h2>Contact</h2>
                 <div class="breadcrumbs">
                     <a href="#"><i class="fas fa-home"></i></a> &raquo; Contact
@@ -48,8 +52,8 @@
 
         <section class="contact-form-section">
             <div class="container two-columns">
-                <div class="contact-details">
-                    <h2 class="section-title">Get In Touch With Us</h2>
+                <div class="contact-details slide-right">
+                    <h2 class="section-title">Get In <span class="color">Touch</span> With Us</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
@@ -61,6 +65,7 @@
                     </div>
                 </div>
                 <div class="form-container">
+                    <div class="form-container slide-up">
                     <form id="contactForm">
                         <div class="form-row">
                             <div class="form-group">
@@ -79,11 +84,14 @@
                             </div>
                             <div class="form-group">
                                 <label for="department">Department</label>
-                                <select id="department">
-                                    <option>Business Department</option>
-                                    <option>Customer Support</option>
-                                    <option>General Inquiry</option>
-                                </select>
+                                <div class="select-wrapper">
+                                    <select id="department">
+                                        <option>Business Department</option>
+                                        <option>Customer Support</option>
+                                        <option>General Inquiry</option>
+                                    </select>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="form-row">

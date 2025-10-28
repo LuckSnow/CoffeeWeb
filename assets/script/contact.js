@@ -1,4 +1,18 @@
 $(document).ready(function() {
+    // --- Hide nav on scroll ---
+    var lastScrollTop = 0;
+    var $nav = $('.main-nav');
+    $(window).on('scroll', function() {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop && st > 80) {
+            // Scroll down
+            $nav.addClass('hide-nav');
+        } else {
+            // Scroll up
+            $nav.removeClass('hide-nav');
+        }
+        lastScrollTop = st;
+    });
 
     // --- Scroll to Top Button ---
     var scrollTopBtn = $('#scrollTopBtn');
