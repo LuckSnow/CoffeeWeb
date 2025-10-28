@@ -618,9 +618,7 @@ a:hover {
 .footer-widget { 
     flex: 1; 
 }
-.footer-widget .logo-text{
-    /* color: #fff; */
-}
+
 .footer-widget h4 {
     font-family: var(--font-heading);
     color: var(--text-light);

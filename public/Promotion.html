@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brothers Cafe - Promotion</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="../assets/css/promotion.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="Brothers Cafe Logo" class="logo-img">
+                <a href="../index.html"><h1 class="logo-text">Brothers Cafe</h1></a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Our Menu</a></li>
+                <li><a href="./Promotion.html" class="active">Promotion</a></li>
+                <li><a href="./shop.html">Shop</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#" class="phone-btn"><i class="fas fa-phone"></i> +1 (888) 24 675</a>
+            <a href="#" class="cart-btn">
+                <i class="fas fa-shopping-cart"></i> CART
+                <div class="cart-popup">
+                    <div class="cart-empty">
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>Cart's empty! Let's fill it up!</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero / Banner with Countdown (rotating) -->
+        <section class="promo-hero">
+            <div class="container">
+                <div class="promo-slides">
+                    <!-- Slide 1 -->
+                    <div class="promo-slide slide-active" data-end="2025-10-31T23:59:59">
+                        <div class="hero-inner">
+                            <div class="hero-content">
+                                <h1>Giảm Giá Cuối Mùa <span class="highlight">50%</span></h1>
+                                <p class="lead">Từ 25/10 đến 31/10 — Ưu đãi chỉ trong thời gian giới hạn. Số lượng có hạn.</p>
+                                <div class="cta-row">
+                                    <a href="#productGrid" class="cta-btn">Mua ngay</a>
+                                    <a href="#promoTerms" class="cta-outline">Xem thể lệ</a>
+                                </div>
+                            </div>
+                            <div class="hero-media">
+                                <img src="/assets/img/logo.png" alt="Promo" class="hero-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="promo-slide" data-end="2025-10-29T23:59:59">
+                        <div class="hero-inner">
+                            <div class="hero-content">
+                                <h1>Flash Sale - Giảm sốc <span class="highlight">-70%</span></h1>
+                                <p class="lead">Ưu đãi trong vài giờ. Nhanh tay kẻo hết!</p>
+                                <div class="cta-row">
+                                    <a href="#productGrid" class="cta-btn">Xem Flash Sale</a>
+                                    <a href="#promoTerms" class="cta-outline">Chi tiết</a>
+                                </div>
+                            </div>
+                            <div class="hero-media">
+                                <img src="/assets/img/logo.png" alt="Flash Sale" class="hero-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="promo-slide" data-end="2025-11-05T23:59:59">
+                        <div class="hero-inner">
+                            <div class="hero-content">
+                                <h1>Đồng giá <span class="highlight">99K</span></h1>
+                                <p class="lead">Chọn món yêu thích với mức giá cố định chỉ 99K.</p>
+                                <div class="cta-row">
+                                    <a href="#productGrid" class="cta-btn">Mua ngay</a>
+                                    <a href="#promoTerms" class="cta-outline">Xem thể lệ</a>
+                                </div>
+                            </div>
+                            <div class="hero-media">
+                                <img src="/assets/img/logo.png" alt="Đồng giá 99K" class="hero-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Countdown (shared, updated per active slide) -->
+                <div class="countdown-wrap">
+                    <div class="countdown" id="promoCountdown" data-end="2025-10-31T23:59:59">
+                        <div class="count-item"><span class="count-number" id="days">00</span><span class="count-label">Ngày</span></div>
+                        <div class="count-item"><span class="count-number" id="hours">00</span><span class="count-label">Giờ</span></div>
+                        <div class="count-item"><span class="count-number" id="minutes">00</span><span class="count-label">Phút</span></div>
+                        <div class="count-item"><span class="count-number" id="seconds">00</span><span class="count-label">Giây</span></div>
+                    </div>
+                    <div class="promo-dates">Thời gian áp dụng: <strong id="promoDateStart">25/10/2025</strong> — <strong id="promoDateEnd">31/10/2025</strong></div>
+                </div>
+
+                <!-- Dots / indicators -->
+                <div class="promo-dots"></div>
+            </div>
+        </section>
+
+        <!-- Filters and Sorting -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-row">
+                    <div class="filters-left">
+                        <label>Danh mục:</label>
+                        <select id="categoryFilter">
+                            <option value="all">Tất cả</option>
+                            <option value="coffee">Cà phê</option>
+                            <option value="dessert">Bánh & Tráng miệng</option>
+                            <option value="bundle">Combo</option>
+                        </select>
+                        <label>Giảm giá:</label>
+                        <select id="discountFilter">
+                            <option value="all">Tất cả</option>
+                            <option value="10">-10%+</option>
+                            <option value="30">-30%+</option>
+                            <option value="50">-50%+</option>
+                        </select>
+                    </div>
+                    <div class="filters-right">
+                        <label>Sắp xếp:</label>
+                        <select id="sortSelect">
+                            <option value="featured">Nổi bật</option>
+                            <option value="price-asc">Giá: thấp → cao</option>
+                            <option value="price-desc">Giá: cao → thấp</option>
+                            <option value="discount-desc">Giảm nhiều</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section id="productGrid" class="product-grid-section">
+            <div class="container">
+                <div class="grid">
+                    <!-- Product Card (repeat) -->
+                    <div class="product-card" data-category="coffee" data-price="45000" data-discount="50">
+                        <div class="badge">-50%</div>
+                        <img src="/assets/img/logo.png" alt="Product" class="product-img">
+                        <h3 class="product-title">Cà Phê Đặc Biệt</h3>
+                        <div class="price-row">
+                            <div class="original">90.000đ</div>
+                            <div class="sale">45.000đ</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-cart">Thêm vào giỏ</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="dessert" data-price="60000" data-discount="30">
+                        <div class="badge">-30%</div>
+                        <img src="/assets/img/logo.png" alt="Product" class="product-img">
+                        <h3 class="product-title">Bánh Muffin</h3>
+                        <div class="price-row">
+                            <div class="original">85.000đ</div>
+                            <div class="sale">59.500đ</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-cart">Thêm vào giỏ</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="bundle" data-price="99000" data-discount="40">
+                        <div class="badge">-40%</div>
+                        <img src="/assets/img/logo.png" alt="Product" class="product-img">
+                        <h3 class="product-title">Combo Cà Phê + Bánh</h3>
+                        <div class="price-row">
+                            <div class="original">165.000đ</div>
+                            <div class="sale">99.000đ</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-cart">Thêm vào giỏ</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="coffee" data-price="35000" data-discount="10">
+                        <div class="badge">-10%</div>
+                        <img src="/assets/img/logo.png" alt="Product" class="product-img">
+                        <h3 class="product-title">Latte</h3>
+                        <div class="price-row">
+                            <div class="original">39.000đ</div>
+                            <div class="sale">35.000đ</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-cart">Thêm vào giỏ</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="dessert" data-price="30000" data-discount="50">
+                        <div class="badge">-50%</div>
+                        <img src="/assets/img/logo.png" alt="Product" class="product-img">
+                        <h3 class="product-title">Cookie Chocolate</h3>
+                        <div class="price-row">
+                            <div class="original">60.000đ</div>
+                            <div class="sale">30.000đ</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-cart">Thêm vào giỏ</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="bundle" data-price="99000" data-discount="20">
+                        <div class="badge">-20%</div>
+                        <img src="/assets/img/logo.png" alt="Product" class="product-img">
+                        <h3 class="product-title">Set Sáng</h3>
+                        <div class="price-row">
+                            <div class="original">123.000đ</div>
+                            <div class="sale">99.000đ</div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-cart">Thêm vào giỏ</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Coupons & Vouchers -->
+        <section class="coupons-section">
+            <div class="container">
+                <h2 class="section-title">Mã giảm giá</h2>
+                <div class="coupons-grid">
+                    <div class="coupon-card">
+                        <div class="coupon-code">BRO50</div>
+                        <div class="coupon-desc">Giảm 50% cho đơn hàng đầu tiên</div>
+                        <button class="btn copy-code" data-code="BRO50">Sao chép</button>
+                    </div>
+                    <div class="coupon-card">
+                        <div class="coupon-code">FALL30</div>
+                        <div class="coupon-desc">-30% cho combo</div>
+                        <button class="btn copy-code" data-code="FALL30">Sao chép</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotion Terms -->
+        <section id="promoTerms" class="terms-section">
+            <div class="container">
+                <h3>Điều khoản & Thể lệ</h3>
+                <ul>
+                    <li>Thời gian áp dụng: Từ 25/10/2025 đến 31/10/2025.</li>
+                    <li>Ưu đãi áp dụng cho sản phẩm được ghi rõ trên trang khuyến mãi.</li>
+                    <li>Không áp dụng đồng thời với các chương trình khuyến mãi khác trừ khi có ghi chú.</li>
+                    <li>Số lượng có hạn; công ty có quyền kết thúc chương trình sớm khi hết hàng.</li>
+                    <li>Áp dụng cho đơn hàng từ 100.000đ (nếu có quy định cụ thể sẽ hiển thị trên từng ưu đãi).</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-columns">
+            <div class="footer-widget">
+                <h3 class="logo-text">Brothers Cafe</h3>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>ADDRESS</strong><br>No.23, King St. Gold Ave. NY 74521</p>
+                <p><i class="fas fa-phone"></i> <strong>TEL</strong><br>+1 (800) 1234 567</p>
+            </div>
+            <div class="footer-widget">
+                <h4>Working Hours</h4>
+                <p><i class="far fa-clock"></i> <strong>OPENING HOURS</strong><br>Sunday - Thursday 9:00 AM - 12:00 AM</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-widget">
+                 <h4>Our Location</h4>
+                 <div class="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d66218.20040396864!2d106.5716199486328!3d10.795760000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175296fc0b973a5%3A0xe6add0a532658249!2sBrothers%20Cafe!5e1!3m2!1svi!2s!4v1760364918909!5m2!1svi!2s" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                 </div>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div class="sub-footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <a id="scrollTopBtn" href="#"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../assets/script/promotion.js"></script>
+
+</body>
+</html>
