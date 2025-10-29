@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --highlight-color: #e5a072;
+  --text-color: #1a1302;
+  --font-title: "Oleo Script Swash Caps";
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Nunito", sans-serif;
+}
+/* common */
+.container {
+  width: 1270px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+/* header */
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+.navbar__item a {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff;
+}
+header {
+  background-color: var(--text-color);
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.header__logo div {
+  color: var(--highlight-color);
+  font-size: 3rem;
+  font-family: var(--font-title);
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.navbar__list {
+  display: flex;
+}
+.navbar__link {
+  padding: 8px 15px;
+  color: #c9d2da;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+.fa-phone {
+  color: #fff;
+}
+.phone span {
+  color: #fff;
+  padding: 15px 20px;
+}
+.phone__icon {
+  padding: 15px;
+  background-color: #eab28d;
+  border-radius: 5px 0 0 5px;
+}
+.phone {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--highlight-color);
+  margin-right: 20px;
+}
+.fa-cart-shopping {
+  color: #fff;
+}
+.cart span {
+  color: #fff;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-around;
+}
+.cart {
+  display: flex;
+}
