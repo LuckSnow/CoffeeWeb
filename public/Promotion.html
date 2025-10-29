@@ -50,20 +50,37 @@
         <!-- Hero / Banner with Countdown (rotating) -->
         <section class="promo-hero">
             <div class="container">
+                <button class="slide-nav prev" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slide-nav next" aria-label="Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
                 <div class="promo-slides">
+                    <!-- Navigation Buttons -->
                     <!-- Slide 1 -->
                     <div class="promo-slide slide-active" data-end="2025-10-31T23:59:59">
                         <div class="hero-inner">
                             <div class="hero-content">
+                                <span class="promo-tag">Khuyến mãi đặc biệt</span>
                                 <h1>Giảm Giá Cuối Mùa <span class="highlight">50%</span></h1>
-                                <p class="lead">Từ 25/10 đến 31/10 — Ưu đãi chỉ trong thời gian giới hạn. Số lượng có hạn.</p>
+                                <p class="lead">Từ 25/10 đến 31/10 — Cơ hội cuối cùng để thưởng thức những món ngon với giá cực hấp dẫn!</p>
+                                <ul class="promo-features">
+                                    <li><i class="fas fa-check-circle"></i> Áp dụng cho tất cả các loại cà phê</li>
+                                    <li><i class="fas fa-check-circle"></i> Giảm thêm 10% khi mua combo</li>
+                                    <li><i class="fas fa-check-circle"></i> Tặng phiếu quà tặng cho đơn từ 500K</li>
+                                </ul>
                                 <div class="cta-row">
-                                    <a href="#productGrid" class="cta-btn">Mua ngay</a>
+                                    <a href="#productGrid" class="cta-btn pulse-animation">Mua ngay</a>
                                     <a href="#promoTerms" class="cta-outline">Xem thể lệ</a>
                                 </div>
                             </div>
                             <div class="hero-media">
-                                <img src="/assets/img/logo.png" alt="Promo" class="hero-image">
+                                <img src="/assets/img/21532064_6483662.jpg" alt="Promo" class="hero-image">
+                                <div class="promo-badge">
+                                    <span class="save-text">Tiết kiệm đến</span>
+                                    <span class="save-amount">50%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -166,8 +183,8 @@
                             <div class="sale">45.000đ</div>
                         </div>
                         <div class="product-actions">
-                            <button class="btn add-cart">Thêm vào giỏ</button>
-                            <button class="btn buy-now">Mua ngay</button>
+                            <button class="btn add-cart"><i class="fas fa-shopping-cart"></i> Thêm vào giỏ</button>
+                            <button class="btn buy-now"><i class="fas fa-bolt"></i> Mua ngay</button>
                         </div>
                     </div>
 
@@ -267,14 +284,31 @@
         <!-- Promotion Terms -->
         <section id="promoTerms" class="terms-section">
             <div class="container">
-                <h3>Điều khoản & Thể lệ</h3>
+                <h3>Điều khoản & Thể lệ Chương trình</h3>
                 <ul>
-                    <li>Thời gian áp dụng: Từ 25/10/2025 đến 31/10/2025.</li>
-                    <li>Ưu đãi áp dụng cho sản phẩm được ghi rõ trên trang khuyến mãi.</li>
-                    <li>Không áp dụng đồng thời với các chương trình khuyến mãi khác trừ khi có ghi chú.</li>
-                    <li>Số lượng có hạn; công ty có quyền kết thúc chương trình sớm khi hết hàng.</li>
-                    <li>Áp dụng cho đơn hàng từ 100.000đ (nếu có quy định cụ thể sẽ hiển thị trên từng ưu đãi).</li>
+                    <li><strong>Thời gian áp dụng:</strong> Từ 25/10/2025 đến 31/10/2025</li>
+                    <li><strong>Phạm vi áp dụng:</strong> Tất cả chi nhánh Brothers Cafe trên toàn quốc</li>
+                    <li><strong>Đối tượng:</strong> Tất cả khách hàng mua sắm tại Brothers Cafe</li>
+                    <li><strong>Điều kiện đơn hàng:</strong> Áp dụng cho đơn hàng từ 100.000đ</li>
+                    <li><strong>Ưu đãi đặc biệt:</strong>
+                        - Giảm 50% cho tất cả sản phẩm được đánh dấu
+                        - Tặng phiếu quà tặng 50.000đ cho đơn hàng từ 500.000đ
+                        - Giảm thêm 10% khi mua combo đã được giảm giá
+                    </li>
+                    <li><strong>Quy định sử dụng mã giảm giá:</strong>
+                        - Mỗi mã giảm giá chỉ được sử dụng 1 lần/khách hàng
+                        - Không áp dụng đồng thời với các chương trình khuyến mãi khác
+                        - Mã giảm giá có giá trị trong thời gian diễn ra chương trình
+                    </li>
+                    <li><strong>Điều khoản khác:</strong>
+                        - Số lượng sản phẩm có hạn
+                        - Brothers Cafe có quyền điều chỉnh điều khoản và kết thúc chương trình sớm nếu cần
+                        - Trong mọi trường hợp, quyết định của Brothers Cafe là quyết định cuối cùng
+                    </li>
                 </ul>
+                <div class="terms-note">
+                    <p>* Lưu ý: Vui lòng đọc kỹ điều khoản trước khi tham gia chương trình. Mọi thắc mắc xin liên hệ hotline: +1 (888) 24 675 để được hỗ trợ.</p>
+                </div>
             </div>
         </section>
     </main>
