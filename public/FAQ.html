@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="/assets/css/faq.css">
+    <link rel="stylesheet" href="/assets/css/contact.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="Brothers Cafe Logo" class="logo-img">
+                <a href="../index.html"><h1 class="logo-text">Brothers Cafe</h1></a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Our Menu</a></li>
+                <li><a href="./promotion.html">Promotion</a></li>
+                <li><a href="./FAQ.html" class="active">FAQ</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+         <div class="header-actions">
+            <a href="#" class="phone-btn"><i class="fas fa-phone"></i> +1 (888) 24 675</a>
+            <a href="#" class="cart-btn">
+                <i class="fas fa-shopping-cart"></i> CART
+                <div class="cart-popup">
+                    <div class="cart-empty">
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>Cart's empty! Let's fill it up!</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </header>
+    <main>
+         <section class="page-title">
+            <div class="container slide-left">
+                <h2>FAQ</h2>
+                <div class="breadcrumbs">
+                    <a href="#"><i class="fas fa-home"></i></a> &raquo; FAQ
+                </div>
+            </div>
+        </section>
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-img">
+                    <img src="https://xtratheme.com/elementor/cafe/wp-content/uploads/sites/138/2025/06/img4.jpg" alt="" class="img">
+                </div>
+                <div class="form-container">
+                    <div class="title">
+                        <div class="title-icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <div class="title-text">
+                            <p>ASK US</p>
+                        </div>
+                    </div>
+                    <form action="#">
+                    <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name (*)</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email (*)</label>
+                                <input type="email" id="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="department">Department</label>
+                                <div class="select-wrapper">
+                                    <select id="department">
+                                        <option>Business Department</option>
+                                        <option>Customer Support</option>
+                                        <option>General Inquiry</option>
+                                    </select>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                             <div class="form-group full-width">
+                                <label for="question">Your Question</label>
+                                <textarea id="question" rows="5"></textarea>
+                            </div>
+                        </div>
+                         <button type="submit" class="submit-btn">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+                
+        </section>
+    </main>
+    <script src="/assets/script/faq.js"></script>
+</body>
+</html>
