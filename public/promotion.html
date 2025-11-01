@@ -37,10 +37,25 @@
             <a href="#" class="phone-btn"><i class="fas fa-phone"></i> +1 (888) 24 675</a>
             <a href="#" class="cart-btn">
                 <i class="fas fa-shopping-cart"></i> CART
+                <span class="cart-count" style="display: none;">0</span>
                 <div class="cart-popup">
+                    <div class="cart-header">
+                        <h3>Giỏ hàng của bạn</h3>
+                        <button class="close-cart"><i class="fas fa-times"></i></button>
+                    </div>
                     <div class="cart-empty">
                         <i class="fas fa-shopping-basket"></i>
                         <p>Cart's empty! Let's fill it up!</p>
+                    </div>
+                    <div class="cart-items" style="display: none;">
+                        <!-- Cart items will be inserted here -->
+                    </div>
+                    <div class="cart-footer" style="display: none;">
+                        <div class="cart-total">
+                            <span>Tổng cộng:</span>
+                            <span class="total-amount">0đ</span>
+                        </div>
+                        <button class="btn checkout-btn">Thanh toán</button>
                     </div>
                 </div>
             </a>
@@ -292,12 +307,12 @@
                     <div class="coupon-card animate__animated animate__fadeIn">
                         <div class="coupon-code">BRO50</div>
                         <div class="coupon-desc">Giảm 50% cho đơn hàng đầu tiên</div>
-                        <button class="btn copy-code" data-code="BRO50">Sao chép</button>
+                        <button class="btn copy-code" data-code="BRO50">Sử dụng</button>
                     </div>
                     <div class="coupon-card animate__animated animate__fadeIn">
                         <div class="coupon-code">FALL30</div>
                         <div class="coupon-desc">-30% cho combo</div>
-                        <button class="btn copy-code" data-code="FALL30">Sao chép</button>
+                        <button class="btn copy-code" data-code="FALL30">Sử dụng</button>
                     </div>
                 </div>
             </div>

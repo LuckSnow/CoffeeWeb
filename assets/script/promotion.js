@@ -220,9 +220,9 @@ $(document).ready(function() {
         const code = btn.data('code');
         
         navigator.clipboard.writeText(code).then(() => {
-            btn.addClass('copied').text('Đã sao chép!');
+            btn.addClass('copied').text('Đã sử dụng!');
             setTimeout(() => {
-                btn.removeClass('copied').text('Sao chép');
+                btn.removeClass('copied').text('Sử dụng');
             }, 2000);
         });
     });
@@ -242,4 +242,183 @@ $(document).ready(function() {
         e.preventDefault();
         $('html, body').animate({scrollTop: 0}, 600);
     });
+
+    // Cart functionality
+    let cart = [];
+
+    function updateCartDisplay() {
+        const cartCount = document.querySelector('.cart-count');
+        const cartEmpty = document.querySelector('.cart-empty');
+        const cartItems = document.querySelector('.cart-items');
+        const cartFooter = document.querySelector('.cart-footer');
+        
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        
+        if (totalItems > 0) {
+            cartCount.textContent = totalItems;
+            cartCount.style.display = 'flex';
+            cartEmpty.style.display = 'none';
+            cartItems.style.display = 'block';
+            cartFooter.style.display = 'block';
+        } else {
+            cartCount.style.display = 'none';
+            cartEmpty.style.display = 'flex';
+            cartItems.style.display = 'none';
+            cartFooter.style.display = 'none';
+        }
+        
+        renderCartItems();
+        updateCartTotal();
+    }
+
+    function renderCartItems() {
+        const cartItemsContainer = document.querySelector('.cart-items');
+        cartItemsContainer.innerHTML = '';
+        
+        cart.forEach((item, index) => {
+            const cartItemHTML = `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.title}" class="cart-item-img">
+                    <div class="cart-item-details">
+                        <h4 class="cart-item-title">${item.title}</h4>
+                        <div class="cart-item-price">${formatPrice(item.price)}</div>
+                        <div class="cart-item-controls">
+                            <button class="quantity-btn decrease-qty" data-index="${index}">-</button>
+                            <span class="cart-item-quantity">${item.quantity}</span>
+                            <button class="quantity-btn increase-qty" data-index="${index}">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-item" data-index="${index}">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            `;
+            cartItemsContainer.innerHTML += cartItemHTML;
+        });
+        
+        // Add event listeners for quantity buttons
+        document.querySelectorAll('.decrease-qty').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const index = parseInt(this.dataset.index);
+                decreaseQuantity(index);
+            });
+        });
+        
+        document.querySelectorAll('.increase-qty').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const index = parseInt(this.dataset.index);
+                increaseQuantity(index);
+            });
+        });
+        
+        document.querySelectorAll('.remove-item').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const index = parseInt(this.dataset.index);
+                removeFromCart(index);
+            });
+        });
+    }
+
+    function updateCartTotal() {
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        document.querySelector('.total-amount').textContent = formatPrice(total);
+    }
+
+    function formatPrice(price) {
+        return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
+    }
+
+    function addToCart(productCard) {
+        const title = productCard.querySelector('.product-title').textContent;
+        const priceText = productCard.querySelector('.sale').textContent;
+        const price = parseInt(priceText.replace(/[^\d]/g, ''));
+        const image = productCard.querySelector('.default-img').src;
+        
+        const existingItemIndex = cart.findIndex(item => item.title === title);
+        
+        if (existingItemIndex > -1) {
+            cart[existingItemIndex].quantity += 1;
+        } else {
+            cart.push({
+                title,
+                price,
+                image,
+                quantity: 1
+            });
+        }
+        
+        updateCartDisplay();
+        
+        // Show success message
+        showNotification('Đã thêm vào giỏ hàng!');
+    }
+
+    function increaseQuantity(index) {
+        cart[index].quantity += 1;
+        updateCartDisplay();
+    }
+
+    function decreaseQuantity(index) {
+        if (cart[index].quantity > 1) {
+            cart[index].quantity -= 1;
+        } else {
+            cart.splice(index, 1);
+        }
+        updateCartDisplay();
+    }
+
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCartDisplay();
+        showNotification('Đã xóa khỏi giỏ hàng');
+    }
+
+    function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.style.cssText = `
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 10000;
+            animation: slideInRight 0.3s ease;
+        `;
+        notification.textContent = message;
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.style.animation = 'slideOutRight 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+        }, 2000);
+    }
+
+    // Add to cart button event listeners
+    document.querySelectorAll('.add-cart').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productCard = this.closest('.product-card');
+            addToCart(productCard);
+        });
+    });
+
+    // Close cart button
+    document.querySelector('.close-cart')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('.cart-popup').style.opacity = '0';
+        document.querySelector('.cart-popup').style.visibility = 'hidden';
+    });
+
+    // Checkout button
+    document.querySelector('.checkout-btn')?.addEventListener('click', function() {
+        if (cart.length > 0) {
+            alert('Chức năng thanh toán đang được phát triển!');
+        }
+    });
+
+    // Initialize cart display
+    updateCartDisplay();
 });
