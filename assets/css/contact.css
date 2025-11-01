@@ -283,7 +283,7 @@ a:hover {
     position: relative;
 }
 
-.cart-btn::after {
+/* .cart-btn::after {
     content: "0";
     position: absolute;
     top: -8px;
@@ -297,7 +297,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .cart-popup {
     position: absolute;
