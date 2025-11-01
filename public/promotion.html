@@ -59,11 +59,11 @@
                 </button>
                 <div class="promo-slides">
                     <!-- Navigation Buttons -->
-                    <!-- Slide 1 -->
-                    <div class="promo-slide slide-active" data-end="2025-10-31T23:59:59">
+                    <!-- Slide 1: 3 ngày -->
+                    <div class="promo-slide slide-active" style="background-image: url('/assets/img/banner1.jpg');">
                         <div class="hero-inner">
                             <div class="hero-content">
-                                <span class="promo-tag">Khuyến mãi đặc biệt</span>
+                                <span class="promo-tag">Khuyến mãi đặc biệt - Còn 3 ngày</span>
                                 <h1>Giảm Giá Cuối Mùa <span class="highlight">50%</span></h1>
                                 <p class="lead">Từ 25/10 đến 31/10 — Cơ hội cuối cùng để thưởng thức những món ngon với giá cực hấp dẫn!</p>
                                 <ul class="promo-features">
@@ -76,46 +76,45 @@
                                     <a href="#promoTerms" class="cta-outline">Xem thể lệ</a>
                                 </div>
                             </div>
-                            <div class="hero-media">
-                                <img src="/assets/img/21532064_6483662.jpg" alt="Promo" class="hero-image">
-                                <div class="promo-badge">
-                                    <span class="save-text">Tiết kiệm đến</span>
-                                    <span class="save-amount">50%</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
-                    <!-- Slide 2 -->
-                    <div class="promo-slide" data-end="2025-10-29T23:59:59">
+                    <!-- Slide 2: 2 ngày -->
+                    <div class="promo-slide" style="background-image: url('/assets/img/banner2.jpg');">
                         <div class="hero-inner">
                             <div class="hero-content">
-                                <h1>Flash Sale - Giảm sốc <span class="highlight">-70%</span></h1>
+                                <span class="promo-tag">Flash Sale - Còn 2 ngày</span>
+                                <h1>Flash Sale - Giảm sốc <span class="highlight">70%</span></h1>
                                 <p class="lead">Ưu đãi trong vài giờ. Nhanh tay kẻo hết!</p>
+                                <ul class="promo-features">
+                                    <li><i class="fas fa-check-circle"></i> Giảm đến 70% cho sản phẩm chọn lọc</li>
+                                    <li><i class="fas fa-check-circle"></i> Miễn phí giao hàng đơn từ 200K</li>
+                                    <li><i class="fas fa-check-circle"></i> Tặng kèm bánh ngọt khi mua 2 ly</li>
+                                </ul>
                                 <div class="cta-row">
                                     <a href="#productGrid" class="cta-btn">Xem Flash Sale</a>
                                     <a href="#promoTerms" class="cta-outline">Chi tiết</a>
                                 </div>
                             </div>
-                            <div class="hero-media">
-                                <img src="/assets/img/logo.png" alt="Flash Sale" class="hero-image">
-                            </div>
                         </div>
                     </div>
 
-                    <!-- Slide 3 -->
-                    <div class="promo-slide" data-end="2025-11-05T23:59:59">
+                    <!-- Slide 3: 1 ngày -->
+                    <div class="promo-slide" style="background-image: url('/assets/img/banner3.jpg');">
                         <div class="hero-inner">
                             <div class="hero-content">
+                                <span class="promo-tag">Đồng giá đặc biệt - Còn 1 ngày</span>
                                 <h1>Đồng giá <span class="highlight">99K</span></h1>
                                 <p class="lead">Chọn món yêu thích với mức giá cố định chỉ 99K.</p>
+                                <ul class="promo-features">
+                                    <li><i class="fas fa-check-circle"></i> Hơn 20 món đồng giá 99K</li>
+                                    <li><i class="fas fa-check-circle"></i> Áp dụng cả ngày không giới hạn</li>
+                                    <li><i class="fas fa-check-circle"></i> Tích điểm thành viên x2</li>
+                                </ul>
                                 <div class="cta-row">
                                     <a href="#productGrid" class="cta-btn">Mua ngay</a>
                                     <a href="#promoTerms" class="cta-outline">Xem thể lệ</a>
                                 </div>
-                            </div>
-                            <div class="hero-media">
-                                <img src="/assets/img/logo.png" alt="Đồng giá 99K" class="hero-image">
                             </div>
                         </div>
                     </div>
@@ -129,7 +128,7 @@
                         <div class="count-item"><span class="count-number" id="minutes">00</span><span class="count-label">Phút</span></div>
                         <div class="count-item"><span class="count-number" id="seconds">00</span><span class="count-label">Giây</span></div>
                     </div>
-                    <div class="promo-dates">Thời gian áp dụng: <strong id="promoDateStart">25/10/2025</strong> — <strong id="promoDateEnd">31/10/2025</strong></div>
+                    <div class="promo-dates">Thời gian áp dụng: <strong id="promoDateRange"></strong></div>
                 </div>
 
                 <!-- Dots / indicators -->
@@ -144,26 +143,26 @@
                     <div class="filters-left">
                         <label>Danh mục:</label>
                         <select id="categoryFilter">
-                            <option value="all">Tất cả</option>
-                            <option value="coffee">Cà phê</option>
-                            <option value="dessert">Bánh & Tráng miệng</option>
-                            <option value="bundle">Combo</option>
+                            <option value="all" class="color">Tất cả</option>
+                            <option value="coffee" class="color">Cà phê</option>
+                            <option value="dessert" class="color">Bánh & Tráng miệng</option>
+                            <option value="bundle" class="color">Combo</option>
                         </select>
                         <label>Giảm giá:</label>
                         <select id="discountFilter">
-                            <option value="all">Tất cả</option>
-                            <option value="10">-10%+</option>
-                            <option value="30">-30%+</option>
-                            <option value="50">-50%+</option>
+                            <option value="all" class="color">Tất cả</option>
+                            <option value="10" class="color">-10%+</option>
+                            <option value="30" class="color">-30%+</option>
+                            <option value="50" class="color">-50%+</option>
                         </select>
                     </div>
                     <div class="filters-right">
                         <label>Sắp xếp:</label>
                         <select id="sortSelect">
-                            <option value="featured">Nổi bật</option>
-                            <option value="price-asc">Giá: thấp → cao</option>
-                            <option value="price-desc">Giá: cao → thấp</option>
-                            <option value="discount-desc">Giảm nhiều</option>
+                            <option value="featured" class="color">Nổi bật</option>
+                            <option value="price-asc" class="color">Giá: thấp → cao</option>
+                            <option value="price-desc" class="color">Giá: cao → thấp</option>
+                            <option value="discount-desc" class="color">Giảm nhiều</option>
                         </select>
                     </div>
                 </div>
@@ -174,10 +173,13 @@
         <section id="productGrid" class="product-grid-section">
             <div class="container">
                 <div class="grid">
-                    <!-- Product Card (repeat) -->
-                    <div class="product-card" data-category="coffee" data-price="45000" data-discount="50">
+                    <!-- Product Card 1 -->
+                    <div class="product-card" data-category="coffee" data-price="45000" data-discount="50" data-hover-img="/assets/img/2.jpg">
                         <div class="badge animate__animated animate__pulse animate__infinite">-50%</div>
-                        <img src="/assets/img/logo.png" alt="Product" class="product-img">
+                        <div class="product-img-wrapper">
+                            <img src="/assets/img/1.jpg" alt="Product" class="product-img default-img">
+                            <img src="/assets/img/2.jpg" alt="Product Hover" class="product-img hover-img">
+                        </div>
                         <h3 class="product-title">Cà Phê Đặc Biệt</h3>
                         <div class="price-row">
                             <div class="original">90.000đ</div>
@@ -189,9 +191,13 @@
                         </div>
                     </div>
 
-                    <div class="product-card" data-category="dessert" data-price="60000" data-discount="30">
+                    <!-- Product Card 2 -->
+                    <div class="product-card" data-category="dessert" data-price="60000" data-discount="30" data-hover-img="/assets/img/6.jpg">
                         <div class="badge">-30%</div>
-                        <img src="/assets/img/logo.png" alt="Product" class="product-img">
+                        <div class="product-img-wrapper">
+                            <img src="/assets/img/5.jpg" alt="Product" class="product-img default-img">
+                            <img src="/assets/img/6.jpg" alt="Product Hover" class="product-img hover-img">
+                        </div>
                         <h3 class="product-title">Bánh Muffin</h3>
                         <div class="price-row">
                             <div class="original">85.000đ</div>
@@ -203,10 +209,13 @@
                         </div>
                     </div>
 
-                    <div class="product-card" data-category="bundle" data-price="99000" data-discount="40">
+                    <!-- Product Card 3 -->
+                    <div class="product-card" data-category="bundle" data-price="99000" data-discount="40" data-hover-img="/assets/img/10.jpg">
                         <div class="badge">-40%</div>
-                        <img src="/assets/img/logo.png" alt="Product" class="product-img">
-                        <h3 class="product-title">Combo Cà Phê + Bánh</h3>
+                        <div class="product-img-wrapper">
+                            <img src="/assets/img/9.jpg" alt="Product" class="product-img default-img">
+                        </div>
+                        <h3 class="product-title">Combo Cà Phê + Bánh Mì</h3>
                         <div class="price-row">
                             <div class="original">165.000đ</div>
                             <div class="sale">99.000đ</div>
@@ -217,9 +226,13 @@
                         </div>
                     </div>
 
-                    <div class="product-card" data-category="coffee" data-price="35000" data-discount="10">
+                    <!-- Product Card 4 -->
+                    <div class="product-card" data-category="coffee" data-price="35000" data-discount="10" data-hover-img="/assets/img/4.jpg">
                         <div class="badge">-10%</div>
-                        <img src="/assets/img/logo.png" alt="Product" class="product-img">
+                        <div class="product-img-wrapper">
+                            <img src="/assets/img/3.jpg" alt="Product" class="product-img default-img">
+                            <img src="/assets/img/4.jpg" alt="Product Hover" class="product-img hover-img">
+                        </div>
                         <h3 class="product-title">Latte</h3>
                         <div class="price-row">
                             <div class="original">39.000đ</div>
@@ -231,9 +244,13 @@
                         </div>
                     </div>
 
-                    <div class="product-card" data-category="dessert" data-price="30000" data-discount="50">
+                    <!-- Product Card 5 -->
+                    <div class="product-card" data-category="dessert" data-price="30000" data-discount="50" data-hover-img="/assets/img/7.jpg">
                         <div class="badge">-50%</div>
-                        <img src="/assets/img/logo.png" alt="Product" class="product-img">
+                        <div class="product-img-wrapper">
+                            <img src="/assets/img/6.jpg" alt="Product" class="product-img default-img">
+                            <img src="/assets/img/7.jpg" alt="Product Hover" class="product-img hover-img">
+                        </div>
                         <h3 class="product-title">Cookie Chocolate</h3>
                         <div class="price-row">
                             <div class="original">60.000đ</div>
@@ -245,10 +262,14 @@
                         </div>
                     </div>
 
-                    <div class="product-card" data-category="bundle" data-price="99000" data-discount="20">
+                    <!-- Product Card 6 -->
+                    <div class="product-card" data-category="bundle" data-price="99000" data-discount="20" data-hover-img="/assets/img/1.jpg">
                         <div class="badge">-20%</div>
-                        <img src="/assets/img/logo.png" alt="Product" class="product-img">
-                        <h3 class="product-title">Set Sáng</h3>
+                        <div class="product-img-wrapper">
+                            <img src="/assets/img/10.jpg" alt="Product" class="product-img default-img">
+                            <img src="/assets/img/12.jpg" alt="Product Hover" class="product-img hover-img">
+                        </div>
+                        <h3 class="product-title">Matcha Latte</h3>
                         <div class="price-row">
                             <div class="original">123.000đ</div>
                             <div class="sale">99.000đ</div>
