@@ -249,34 +249,6 @@ $(document).ready(function() {
 
     let cart = [];
 
-    // Format currency
-    function formatCurrency(amount) {
-        return new Intl.NumberFormat('vi-VN', {
-            style: 'currency',
-            currency: 'VND'
-        }).format(amount);
-    }
-
-    // Add product to cart
-    function addToCart(productData) {
-        const existingItem = cart.find(item => item.name === productData.name);
-        
-        if (existingItem) {
-            existingItem.quantity += 1;
-        } else {
-            cart.push({
-                name: productData.name,
-                price: productData.price,
-                originalPrice: productData.originalPrice,
-                img: productData.img,
-                quantity: 1
-            });
-        }
-        
-        updateCartDisplay();
-        showCartNotification(productData.name);
-    }
-
     // Remove product from cart
     function removeFromCart(productName) {
         const item = cart.find(item => item.name === productName);
@@ -324,6 +296,36 @@ $(document).ready(function() {
             updateCartDisplay();
         }
     }
+
+    // Format currency
+    function formatCurrency(amount) {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(amount);
+    }
+
+    // Add product to cart
+    function addToCart(productData) {
+        const existingItem = cart.find(item => item.name === productData.name);
+        
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({
+                name: productData.name,
+                price: productData.price,
+                originalPrice: productData.originalPrice,
+                img: productData.img,
+                quantity: 1
+            });
+        }
+        
+        updateCartDisplay();
+        showCartNotification(productData.name);
+    }
+
+
 
     // Update cart display
     function updateCartDisplay() {
@@ -423,7 +425,7 @@ $(document).ready(function() {
     }
 
     // ============================================
-    // EVENT LISTENERS (ĐÃ SỬA LẠI, XÓA CÁI BỊ LỒNG)
+    // EVENT LISTENERS
     // ============================================
     
     // Add to cart button
@@ -438,12 +440,12 @@ $(document).ready(function() {
         addToCart(productData);
     });
     
-    // Quantity controls (event delegation)
-    $(document).on('click', '.qty-btn.plus', function(e) {
+    // Quantity controls (event delegation) - Sử dụng container cụ thể thay vì document
+    $('.cart-popup').on('click', '.qty-btn.plus', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        const name = $(this).data('name');
-        console.log('Plus clicked for:', name);
+        const name = $(this).attr('data-name');
+        console.log('Plus clicked:', name);
         const item = cart.find(item => item.name === name);
         
         // Giới hạn số lượng tối đa là 99
@@ -455,11 +457,11 @@ $(document).ready(function() {
         updateQuantity(name, 1);
     });
     
-    $(document).on('click', '.qty-btn.minus', function(e) {
+    $('.cart-popup').on('click', '.qty-btn.minus', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        const name = $(this).data('name');
-        console.log('Minus clicked for:', name);
+        const name = $(this).attr('data-name');
+        console.log('Minus clicked:', name);
         const item = cart.find(item => item.name === name);
         
         // Nếu số lượng là 1, hiện xác nhận xóa
@@ -473,11 +475,11 @@ $(document).ready(function() {
     });
     
     // Remove item
-    $(document).on('click', '.remove-item', function(e) {
+    $('.cart-popup').on('click', '.remove-item', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        const name = $(this).data('name');
-        console.log('Remove clicked for:', name);
+        const name = $(this).attr('data-name');
+        console.log('Remove clicked:', name);
         removeFromCart(name);
     });
     
@@ -513,4 +515,4 @@ $(document).ready(function() {
         }
     });
     
-}); // <-- Đây là dấu đóng CỦA CẢ FILE, LỖI ĐÃ ĐƯỢC FIX
+});

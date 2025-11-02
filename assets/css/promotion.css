@@ -935,6 +935,7 @@
     font-weight: 600;
     min-width: 20px;
     text-align: center;
+    color: #333;
 }
 
 .remove-item {
@@ -965,7 +966,9 @@
     font-size: 16px;
     font-weight: 600;
 }
-
+.cart-total span{
+    color: #333;
+}
 .total-amount {
     color: #d4a574;
     font-size: 20px;
@@ -1087,6 +1090,7 @@
 .cart-item-info h4 {
     margin: 0 0 5px 0;
     font-size: 14px;
+    color: black;
 }
 
 .cart-item-price {
@@ -1124,6 +1128,7 @@
     font-weight: 600;
     min-width: 20px;
     text-align: center;
+    color: #333;
 }
 
 .remove-item {
