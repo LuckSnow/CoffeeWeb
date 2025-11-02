@@ -440,6 +440,25 @@ $(document).ready(function() {
         addToCart(productData);
     });
     
+    // Buy now button - Add to cart and show cart popup
+    $('.buy-now').on('click', function() {
+        const productCard = $(this).closest('.product-card');
+        const productData = {
+            name: productCard.data('name'),
+            price: parseInt(productCard.data('price')),
+            originalPrice: parseInt(productCard.data('original-price')),
+            img: productCard.data('img')
+        };
+        
+        // Add product to cart
+        addToCart(productData);
+        
+        // Show cart popup after a short delay to see the notification
+        setTimeout(() => {
+            $('.cart-popup').addClass('show');
+        }, 800);
+    });
+    
     // Quantity controls (event delegation) - Sử dụng container cụ thể thay vì document
     $('.cart-popup').on('click', '.qty-btn.plus', function(e) {
         e.preventDefault();
