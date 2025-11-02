@@ -220,9 +220,9 @@ $(document).ready(function() {
         const code = btn.data('code');
         
         navigator.clipboard.writeText(code).then(() => {
-            btn.addClass('copied').text('Đã sử dụng!');
+            btn.addClass('copied').text('Đã sao chép!');
             setTimeout(() => {
-                btn.removeClass('copied').text('Sử dụng');
+                btn.removeClass('copied').text('Sao chép');
             }, 2000);
         });
     });
