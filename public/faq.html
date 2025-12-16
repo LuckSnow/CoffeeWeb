@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brothers Cafe - FAQ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico/android-icon-144x144.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/faq.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo-container">
+        <div class="logo">
+          <img
+            src="../assets/img/logo.png"
+            alt="Brothers Cafe Logo"
+            class="logo-img"
+          />
+          <a href="../index.html"><h1 class="logo-text">Brothers Cafe</h1></a>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./promotion.html">Promotion</a></li>
+          <li><a href="./faq.html" class="active">FAQ</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="phone-btn"
+          ><i class="fas fa-phone"></i> +1 (888) 24 675</a
+        >
+        <a href="#" class="cart-btn">
+          <i class="fas fa-shopping-cart"></i> CART
+          <span class="cart-count" style="display: none"></span>
+          <div class="cart-popup">
+            <div class="cart-header">
+              <h3>Your Cart</h3>
+              <button class="close-cart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-empty">
+              <i class="fas fa-shopping-basket"></i>
+              <p>Cart's empty! Let's fill it up!</p>
+            </div>
+            <div class="cart-items" style="display: none">
+              <!-- Cart items will be inserted here -->
+            </div>
+            <div class="cart-footer" style="display: none">
+              <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">$0</span>
+              </div>
+              <button class="btn checkout-btn">Checkout</button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </header>
+    <main>
+      <section class="page-title">
+        <div class="container slide-left">
+          <h2>FAQ</h2>
+          <div class="breadcrumbs">
+            <a href="#"><i class="fas fa-home"></i></a> &raquo; FAQ
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-main-section">
+        <div class="container">
+          <div class="faq-content-grid">
+            <!-- Left Column: Image + ASK US Form -->
+            <div class="left-column lazy-load-left">
+              <img
+                src="https://xtratheme.com/elementor/cafe/wp-content/uploads/sites/138/2025/06/img4.jpg"
+                alt="Coffee Machine"
+                class="coffee-img"
+              />
+
+              <div class="ask-us-section">
+                <div class="ask-us-header">
+                  <div class="ask-us-icon">
+                    <i class="fas fa-comments"></i>
+                  </div>
+                  <h3>ASK US</h3>
+                </div>
+
+                <form id="askUsForm">
+                  <div class="form-group">
+                    <label for="name">Your Name (*)</label>
+                    <input type="text" id="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Your Email (*)</label>
+                    <input type="email" id="email" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" />
+                  </div>
+                  <div class="form-group">
+                    <label for="department">Department</label>
+                    <div class="select-wrapper">
+                      <select id="department">
+                        <option>Business Department</option>
+                        <option>Customer Support</option>
+                        <option>General Inquiry</option>
+                      </select>
+                      <i class="fas fa-caret-down"></i>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="question">Your Question</label>
+                    <textarea id="question" rows="5"></textarea>
+                  </div>
+                  <button type="submit" class="submit-btn">Ask</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Right Column: Title + FAQs -->
+            <div class="right-column lazy-load-right">
+              <div class="hero-content">
+                <h2 class="hero-title">
+                  Do You Have Any <span class="highlight">Questions?</span>
+                </h2>
+                <p class="hero-description">
+                  Please read questions bellow and if you can not find your
+                  answer, please send us your question, we will answer you as
+                  soon as possible.
+                </p>
+              </div>
+
+              <div class="faq-header">
+                <div class="faq-icon">
+                  <i class="fas fa-question"></i>
+                </div>
+                <h3>F.A.Qs</h3>
+              </div>
+
+              <div class="faq-accordion">
+                <div class="faq-item active">
+                  <button class="faq-question">
+                    What are your opening hours?
+                    <i class="fas fa-chevron-up"></i>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      We are open daily from 8:00 AM to 10:00 PM. Weekend hours
+                      may vary during holidays and special events.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question">
+                    Do you offer non-dairy or plant-based milk options?
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      Yes, we offer a variety of non-dairy milk alternatives
+                      including almond milk, soy milk, oat milk, and coconut
+                      milk.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question">
+                    Can I reserve a table in advance?
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      Yes, you can reserve a table by calling us or using our
+                      online booking system.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question">
+                    Do you have Wi-Fi available for customers?
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      Yes, we provide free high-speed Wi-Fi for all our
+                      customers.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question">
+                    Are your coffee beans locally sourced or imported?
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      We use a combination of both locally sourced and imported
+                      premium coffee beans.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question">
+                    Can I host a private event or meeting at your cafe?
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="faq-answer">
+                    <p>
+                      Absolutely! We have a private area available for events
+                      and meetings.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-columns">
+        <div class="footer-widget">
+          <h3 class="logo-text">Brothers Cafe</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> <strong>ADDRESS</strong
+            ><br />No.23, King St. Gold Ave. NY 74521
+          </p>
+          <p>
+            <i class="fas fa-phone"></i> <strong>TEL</strong><br />+1 (800) 1234
+            567
+          </p>
+          <p>
+            <i class="fas fa-phone"></i> <strong>TEL</strong><br />+1 (800) 1234
+            568
+          </p>
+        </div>
+        <div class="footer-widget">
+          <h4>Working Hours</h4>
+          <p>
+            <i class="far fa-clock"></i> <strong>OPENING HOURS</strong
+            ><br />Sunday - Thursday 9:00 AM - 12:00 AM<br />Friday Saturday
+            9:00 AM - 2:00 AM
+          </p>
+          <p>
+            <i class="fas fa-mug-hot"></i> <strong>BREAKFAST BUFFET</strong
+            ><br />Sunday - Thursday 9:00 AM - 12:00 AM<br />Friday Saturday
+            9:00 AM - 2:00 AM
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="footer-widget">
+          <h4>Our Location</h4>
+          <div class="footer-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d66218.20040396864!2d106.5716199486328!3d10.795760000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175296fc0b973a5%3A0xe6add0a532658249!2sBrothers%20Cafe!5e1!3m2!1svi!2s!4v1760364918909!5m2!1svi!2s"
+              width="100%"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="sub-footer">
+        <div class="sub-footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <a id="scrollTopBtn" href="#"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../assets/script/faq.js"></script>
+  </body>
+</html>

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brothers Cafe - Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico/android-icon-144x144.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/contact.css" />
+    <link rel="stylesheet" href="../assets/css/menu.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-container">
+        <div class="logo-container">
+          <div class="logo">
+            <img
+              src="../assets/img/logo.png"
+              alt="Brothers Cafe Logo"
+              class="logo-img"
+            />
+            <a href="../index.html"><h1 class="logo-text">Brothers Cafe</h1></a>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./menu.html" class="active">Menu</a></li>
+            <li><a href="./promotion.html">Promotion</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="#" class="phone-btn"
+            ><i class="fas fa-phone"></i> +1 (888) 24 675</a
+          >
+          <a href="#" class="cart-btn">
+            <i class="fas fa-shopping-cart"></i> CART
+            <span class="cart-count" style="display: none">0</span>
+            <div class="cart-popup">
+              <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart"><i class="fas fa-times"></i></button>
+              </div>
+              <div class="cart-empty">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Cart's empty! Let's fill it up!</p>
+              </div>
+              <div class="cart-items" style="display: none">
+                <!-- Cart items will be inserted here -->
+              </div>
+              <div class="cart-footer" style="display: none">
+                <div class="cart-total">
+                  <span>Total:</span>
+                  <span class="total-amount">$0</span>
+                </div>
+                <button class="btn checkout-btn">Checkout</button>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-title">
+        <div class="container slide-left">
+          <h2>Menu</h2>
+          <div class="breadcrumbs">
+            <a href="../index.html"><i class="fas fa-home"></i></a> &raquo; Menu
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-content">
+        <div class="menu-intro-wrapper">
+          <div class="container">
+            <h2 class="menu-section-title lazy-load">Our Menu</h2>
+            <p class="menu-intro lazy-load">
+              Explore our delicious selection of coffee and treats.
+            </p>
+          </div>
+        </div>
+
+        <!-- Beverages Section -->
+        <div class="menu-category bg-light">
+          <div class="container">
+            <h3 class="category-title lazy-load">Beverages</h3>
+            <p class="category-description lazy-load">
+              Indulge in our carefully crafted selection of hot and iced
+              beverages. From classic espresso to specialty drinks, each cup is
+              made with premium beans and expert technique.
+            </p>
+            <div class="menu-grid lazy-load">
+              <!-- Coffee Item 1 -->
+              <div
+                class="menu-card"
+                data-category="coffee"
+                data-price="12"
+                data-name="Irish Coffee"
+              >
+                <div class="badge">-50%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/1.jpg"
+                    alt="Irish Coffee"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/2.jpg"
+                    alt="Irish Coffee Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Irish Coffee</h3>
+                <div class="price-row">
+                  <div class="original">$24</div>
+                  <div class="sale">$12</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Coffee Item 2 -->
+              <div
+                class="menu-card"
+                data-category="coffee"
+                data-price="9"
+                data-name="Iced Latte"
+              >
+                <div class="badge">-30%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/3.jpg"
+                    alt="Iced Latte"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/4.jpg"
+                    alt="Iced Latte Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Iced Latte</h3>
+                <div class="price-row">
+                  <div class="original">$13</div>
+                  <div class="sale">$9</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Coffee Item 3 -->
+              <div
+                class="menu-card"
+                data-category="coffee"
+                data-price="11"
+                data-name="Affogato"
+              >
+                <div class="badge">-40%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/5.jpg"
+                    alt="Affogato"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/6.jpg"
+                    alt="Affogato Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Affogato</h3>
+                <div class="price-row">
+                  <div class="original">$18</div>
+                  <div class="sale">$11</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Coffee Item 4 -->
+              <div
+                class="menu-card"
+                data-category="coffee"
+                data-price="8"
+                data-name="Espresso"
+              >
+                <div class="badge">-10%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/7.jpg"
+                    alt="Espresso"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/8.jpg"
+                    alt="Espresso Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Espresso</h3>
+                <div class="price-row">
+                  <div class="original">$9</div>
+                  <div class="sale">$8</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Coffee Item 5 -->
+              <div
+                class="menu-card"
+                data-category="coffee"
+                data-price="10"
+                data-name="Cappuccino"
+              >
+                <div class="badge">-25%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/1.jpg"
+                    alt="Cappuccino"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/2.jpg"
+                    alt="Cappuccino Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Cappuccino</h3>
+                <div class="price-row">
+                  <div class="original">$14</div>
+                  <div class="sale">$10</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Coffee Item 6 -->
+              <div
+                class="menu-card"
+                data-category="coffee"
+                data-price="15"
+                data-name="Mocha"
+              >
+                <div class="badge">-35%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/3.jpg"
+                    alt="Mocha"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/4.jpg"
+                    alt="Mocha Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Mocha</h3>
+                <div class="price-row">
+                  <div class="original">$20</div>
+                  <div class="sale">$15</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Coffee Item 7 -->
+              <div
+                class="menu-card"
+                data-category="coffee"
+                data-price="13"
+                data-name="Americano"
+              >
+                <div class="badge">-20%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/5.jpg"
+                    alt="Americano"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/6.jpg"
+                    alt="Americano Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Americano</h3>
+                <div class="price-row">
+                  <div class="original">$16</div>
+                  <div class="sale">$13</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Coffee Item 8 -->
+              <div
+                class="menu-card"
+                data-category="coffee"
+                data-price="11"
+                data-name="Macchiato"
+              >
+                <div class="badge">-15%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/7.jpg"
+                    alt="Macchiato"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/8.jpg"
+                    alt="Macchiato Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Macchiato</h3>
+                <div class="price-row">
+                  <div class="original">$13</div>
+                  <div class="sale">$11</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Coffee Item 9 -->
+              <div
+                class="menu-card"
+                data-category="coffee"
+                data-price="14"
+                data-name="Flat White"
+              >
+                <div class="badge">-30%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/1.jpg"
+                    alt="Flat White"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/2.jpg"
+                    alt="Flat White Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Flat White</h3>
+                <div class="price-row">
+                  <div class="original">$19</div>
+                  <div class="sale">$14</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination for Beverages -->
+            <div class="pagination-controls">
+              <button class="pagination-btn prev-page" disabled>
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="pagination-info"></div>
+              <button class="pagination-btn next-page">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Section -->
+        <div class="menu-category bg-dark">
+          <div class="container">
+            <h3 class="category-title lazy-load">Food</h3>
+            <p class="category-description lazy-load">
+              Complement your drink with our delicious selection of freshly
+              prepared meals, pastries, and snacks. Perfect for breakfast,
+              lunch, or a light bite anytime.
+            </p>
+            <div class="menu-grid lazy-load">
+              <!-- Food Item 1 -->
+              <div
+                class="menu-card"
+                data-category="food"
+                data-price="8"
+                data-name="Croissant"
+              >
+                <div class="badge">-20%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/9.jpg"
+                    alt="Croissant"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/10.jpg"
+                    alt="Croissant Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Croissant</h3>
+                <div class="price-row">
+                  <div class="original">$10</div>
+                  <div class="sale">$8</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Food Item 2 -->
+              <div
+                class="menu-card"
+                data-category="food"
+                data-price="12"
+                data-name="Sandwich"
+              >
+                <div class="badge">-25%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/11.jpg"
+                    alt="Sandwich"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/12.jpg"
+                    alt="Sandwich Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Club Sandwich</h3>
+                <div class="price-row">
+                  <div class="original">$16</div>
+                  <div class="sale">$12</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Food Item 3 -->
+              <div
+                class="menu-card"
+                data-category="food"
+                data-price="10"
+                data-name="Muffin"
+              >
+                <div class="badge">-30%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/13.jpg"
+                    alt="Muffin"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/14.jpg"
+                    alt="Muffin Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Blueberry Muffin</h3>
+                <div class="price-row">
+                  <div class="original">$14</div>
+                  <div class="sale">$10</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Food Item 4 -->
+              <div
+                class="menu-card"
+                data-category="food"
+                data-price="15"
+                data-name="Breakfast"
+              >
+                <div class="badge">-15%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/15.jpg"
+                    alt="Breakfast"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/16.jpg"
+                    alt="Breakfast Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Breakfast Platter</h3>
+                <div class="price-row">
+                  <div class="original">$18</div>
+                  <div class="sale">$15</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Food Item 5 -->
+              <div
+                class="menu-card"
+                data-category="food"
+                data-price="9"
+                data-name="Bagel"
+              >
+                <div class="badge">-10%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/17.jpg"
+                    alt="Bagel"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/1.jpg"
+                    alt="Bagel Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Cream Cheese Bagel</h3>
+                <div class="price-row">
+                  <div class="original">$10</div>
+                  <div class="sale">$9</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Food Item 6 -->
+              <div
+                class="menu-card"
+                data-category="food"
+                data-price="13"
+                data-name="Salad"
+              >
+                <div class="badge">-20%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/2.jpg"
+                    alt="Salad"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/3.jpg"
+                    alt="Salad Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Caesar Salad</h3>
+                <div class="price-row">
+                  <div class="original">$16</div>
+                  <div class="sale">$13</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination for Food -->
+            <div class="pagination-controls">
+              <button class="pagination-btn prev-page" disabled>
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="pagination-info"></div>
+              <button class="pagination-btn next-page">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Others Section -->
+        <div class="menu-category bg-light">
+          <div class="container">
+            <h3 class="category-title">Desserts & More</h3>
+            <p class="category-description">
+              Sweet treats and special items to make your visit even more
+              delightful. From decadent cakes to refreshing smoothies, discover
+              something special.
+            </p>
+            <div class="menu-grid">
+              <!-- Other Item 1 -->
+              <div
+                class="menu-card"
+                data-category="dessert"
+                data-price="11"
+                data-name="Cheesecake"
+              >
+                <div class="badge">-25%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/4.jpg"
+                    alt="Cheesecake"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/5.jpg"
+                    alt="Cheesecake Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">NY Cheesecake</h3>
+                <div class="price-row">
+                  <div class="original">$15</div>
+                  <div class="sale">$11</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Other Item 2 -->
+              <div
+                class="menu-card"
+                data-category="dessert"
+                data-price="9"
+                data-name="Brownie"
+              >
+                <div class="badge">-30%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/6.jpg"
+                    alt="Brownie"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/7.jpg"
+                    alt="Brownie Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Chocolate Brownie</h3>
+                <div class="price-row">
+                  <div class="original">$13</div>
+                  <div class="sale">$9</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+
+              <!-- Other Item 3 -->
+              <div
+                class="menu-card"
+                data-category="smoothie"
+                data-price="10"
+                data-name="Smoothie"
+              >
+                <div class="badge">-20%</div>
+                <div class="menu-img-wrapper">
+                  <img
+                    src="../assets/img/8.jpg"
+                    alt="Smoothie"
+                    class="menu-img default-img"
+                  />
+                  <img
+                    src="../assets/img/9.jpg"
+                    alt="Smoothie Hover"
+                    class="menu-img hover-img"
+                  />
+                </div>
+                <h3 class="menu-title">Berry Smoothie</h3>
+                <div class="price-row">
+                  <div class="original">$12</div>
+                  <div class="sale">$10</div>
+                </div>
+                <div class="menu-actions">
+                  <button class="btn add-cart">Add to cart</button>
+                  <button class="btn buy-now">Buy now</button>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination for Desserts -->
+            <div class="pagination-controls">
+              <button class="pagination-btn prev-page" disabled>
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="pagination-info"></div>
+              <button class="pagination-btn next-page">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-columns">
+        <div class="footer-widget">
+          <h3 class="logo-text">Brothers Cafe</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> <strong>ADDRESS</strong
+            ><br />No.23, King St. Gold Ave. NY 74521
+          </p>
+          <p>
+            <i class="fas fa-phone"></i> <strong>TEL</strong><br />+1 (800) 1234
+            567
+          </p>
+          <p>
+            <i class="fas fa-phone"></i> <strong>TEL</strong><br />+1 (800) 1234
+            568
+          </p>
+        </div>
+        <div class="footer-widget">
+          <h4>Working Hours</h4>
+          <p>
+            <i class="far fa-clock"></i> <strong>OPENING HOURS</strong
+            ><br />Sunday - Thursday 9:00 AM - 12:00 AM<br />Friday Saturday
+            9:00 AM - 2:00 AM
+          </p>
+          <p>
+            <i class="fas fa-mug-hot"></i> <strong>BREAKFAST BUFFET</strong
+            ><br />Sunday - Thursday 9:00 AM - 12:00 AM<br />Friday Saturday
+            9:00 AM - 2:00 AM
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="footer-widget">
+          <h4>Our Location</h4>
+          <div class="footer-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d66218.20040396864!2d106.5716199486328!3d10.795760000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175296fc0b973a5%3A0xe6add0a532658249!2sBrothers%20Cafe!5e1!3m2!1svi!2s!4v1760364918909!5m2!1svi!2s"
+              width="100%"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="sub-footer">
+        <div class="sub-footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <a id="scrollTopBtn" href="#"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../assets/script/menu.js"></script>
+  </body>
+</html>

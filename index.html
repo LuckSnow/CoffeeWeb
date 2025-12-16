@@ -1,0 +1,683 @@
+<!-- https://xtratheme.com/elementor/cafe/ -->
+<!-- https://order.highlandscoffee.com.vn/account/login -->
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brother Coffee</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./assets/favicon.ico/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./assets/favicon.ico/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/favicon.ico/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/favicon.ico/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./assets/favicon.ico/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/favicon.ico/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/favicon.ico/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./assets/favicon.ico/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon.ico/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/favicon.ico/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon.ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./assets/favicon.ico/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon.ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon.ico/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-container">
+        <div class="logo-container">
+          <div class="logo">
+            <img
+              src="./assets/img/logo.png"
+              alt="Brothers Cafe Logo"
+              class="logo-img"
+            />
+            <a href="./index.html"><h1 class="logo-text">Brothers Cafe</h1></a>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="./public/about.html">About</a></li>
+            <li><a href="./public/menu.html">Menu</a></li>
+            <li><a href="./public/promotion.html">Promotion</a></li>
+            <li><a href="./public/faq.html">FAQ</a></li>
+            <li><a href="./public/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="#" class="phone-btn"
+            ><i class="fas fa-phone"></i> +1 (888) 24 675</a
+          >
+          <a href="#" class="cart-btn">
+            <i class="fas fa-shopping-cart"></i> CART
+            <span class="cart-count" style="display: none">0</span>
+            <div class="cart-popup">
+              <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart"><i class="fas fa-times"></i></button>
+              </div>
+              <div class="cart-empty">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Cart's empty! Let's fill it up!</p>
+              </div>
+              <div class="cart-items" style="display: none">
+                <!-- Cart items will be inserted here -->
+              </div>
+              <div class="cart-footer" style="display: none">
+                <div class="cart-total">
+                  <span>Total:</span>
+                  <span class="total-amount">$0</span>
+                </div>
+                <button class="btn checkout-btn">Checkout</button>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-slider">
+        <div class="hero-slide active">
+          <img src="./assets/img/slide1.jpg" alt="Coffee Shop" />
+          <div class="hero-content">
+            <h2 class="hero-title">
+              Crafted with Passion, Served with a Smile
+            </h2>
+            <p class="hero-subtitle">
+              A coffeehouse, coffee shop, or café is an establishment that
+              primarily serves coffee of various types
+            </p>
+            <div class="hero-buttons">
+              <a href="./public/menu.html" class="btn btn-primary"
+                ><i class="fas fa-file-alt"></i> VIEW OUR MENU</a
+              >
+              <a href="./public/contact.html" class="btn btn-secondary"
+                ><i class="fas fa-check-circle"></i> RESERVE NOW</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="./assets/img/slide2.jpg" alt="Coffee Shop" />
+          <div class="hero-content">
+            <h2 class="hero-title">
+              Crafted with Passion, Served with a Smile
+            </h2>
+            <p class="hero-subtitle">
+              A coffeehouse, coffee shop, or café is an establishment that
+              primarily serves coffee of various types
+            </p>
+            <div class="hero-buttons">
+              <a href="./public/menu.html" class="btn btn-primary"
+                ><i class="fas fa-file-alt"></i> VIEW OUR MENU</a
+              >
+              <a href="./public/contact.html" class="btn btn-secondary"
+                ><i class="fas fa-check-circle"></i> RESERVE NOW</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="./assets/img/slide3.jpg" alt="Coffee Shop" />
+          <div class="hero-content">
+            <h2 class="hero-title">
+              Crafted with Passion, Served with a Smile
+            </h2>
+            <p class="hero-subtitle">
+              A coffeehouse, coffee shop, or café is an establishment that
+              primarily serves coffee of various types
+            </p>
+            <div class="hero-buttons">
+              <a href="./public/menu.html" class="btn btn-primary"
+                ><i class="fas fa-file-alt"></i> VIEW OUR MENU</a
+              >
+              <a href="./public/contact.html" class="btn btn-secondary"
+                ><i class="fas fa-check-circle"></i> RESERVE NOW</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="./assets/img/slide4.jpg" alt="Coffee Shop" />
+          <div class="hero-content">
+            <h2 class="hero-title">
+              Crafted with Passion, Served with a Smile
+            </h2>
+            <p class="hero-subtitle">
+              A coffeehouse, coffee shop, or café is an establishment that
+              primarily serves coffee of various types
+            </p>
+            <div class="hero-buttons">
+              <a href="./public/menu.html" class="btn btn-primary"
+                ><i class="fas fa-file-alt"></i> VIEW OUR MENU</a
+              >
+              <a href="./public/contact.html" class="btn btn-secondary"
+                ><i class="fas fa-check-circle"></i> RESERVE NOW</a
+              >
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn prev-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-btn next-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="slider-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+          <span class="dot" data-slide="3"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-images-grid lazy-load-left">
+            <div
+              class="grid-item grid-item-1 active"
+              data-title="Premium Coffee Experience"
+              data-description="Step into our welcoming space where every detail is crafted to perfection. From our carefully selected beans to our skilled baristas, we ensure every cup tells a story of quality and passion."
+            >
+              <img src="./assets/img/15.jpg" alt="Coffee Shop" />
+            </div>
+            <div
+              class="grid-item grid-item-2"
+              data-title="Artisan Coffee Making"
+              data-description="Watch our expert baristas craft your perfect cup using traditional techniques and modern innovation. Each beverage is prepared with precision, care, and a dedication to excellence."
+            >
+              <img src="./assets/img/16.jpg" alt="Coffee Making" />
+            </div>
+            <div
+              class="grid-item grid-item-3"
+              data-title="Fresh Roasted Beans"
+              data-description="We source the finest coffee beans from around the world and roast them in-house to bring out their unique flavors. Experience the difference that fresh, quality beans make in every sip."
+            >
+              <img src="./assets/img/17.jpg" alt="Coffee Beans" />
+            </div>
+            <div
+              class="grid-item grid-item-4"
+              data-title="Delicious Food Menu"
+              data-description="Complement your coffee with our delicious selection of freshly prepared meals, pastries, and snacks. From hearty breakfasts to light bites, we have something for every taste and occasion."
+            >
+              <img src="./assets/img/9.jpg" alt="Breakfast" />
+            </div>
+          </div>
+          <div class="about-text lazy-load-right">
+            <h2 class="section-title" id="about-title">
+              Premium Coffee Experience
+            </h2>
+            <p id="about-description">
+              Step into our welcoming space where every detail is crafted to
+              perfection. From our carefully selected beans to our skilled
+              baristas, we ensure every cup tells a story of quality and
+              passion.
+            </p>
+            <div class="about-buttons">
+              <a href="./public/menu.html" class="btn btn-primary">OUR MENU</a>
+              <a href="./public/contact.html" class="btn btn-secondary"
+                >RESERVE NOW</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+      <div class="container">
+        <h2 class="section-title lazy-load">Coffee Menu</h2>
+        <div class="products-grid lazy-load">
+          <div
+            class="product-card"
+            data-category="coffee"
+            data-price="12"
+            data-discount="50"
+            data-hover-img="./assets/img/2.jpg"
+            data-name="Irish Coffee"
+            data-img="./assets/img/1.jpg"
+            data-original-price="24"
+          >
+            <div class="badge">-50%</div>
+            <div class="product-img-wrapper">
+              <img
+                src="./assets/img/1.jpg"
+                alt="Irish Coffee"
+                class="product-img default-img"
+              />
+              <img
+                src="./assets/img/2.jpg"
+                alt="Irish Coffee Hover"
+                class="product-img hover-img"
+              />
+            </div>
+            <h3 class="product-title">Irish Coffee</h3>
+            <div class="price-row">
+              <div class="original">$24</div>
+              <div class="sale">$12</div>
+            </div>
+            <div class="product-actions">
+              <button class="btn add-cart">Add to cart</button>
+              <button class="btn buy-now">Buy now</button>
+            </div>
+          </div>
+          <div
+            class="product-card"
+            data-category="coffee"
+            data-price="9"
+            data-discount="30"
+            data-hover-img="./assets/img/4.jpg"
+            data-name="Iced Latte"
+            data-img="./assets/img/3.jpg"
+            data-original-price="13"
+          >
+            <div class="badge">-30%</div>
+            <div class="product-img-wrapper">
+              <img
+                src="./assets/img/3.jpg"
+                alt="Iced Latte"
+                class="product-img default-img"
+              />
+              <img
+                src="./assets/img/4.jpg"
+                alt="Iced Latte Hover"
+                class="product-img hover-img"
+              />
+            </div>
+            <h3 class="product-title">Iced Latte</h3>
+            <div class="price-row">
+              <div class="original">$13</div>
+              <div class="sale">$9</div>
+            </div>
+            <div class="product-actions">
+              <button class="btn add-cart">Add to cart</button>
+              <button class="btn buy-now">Buy now</button>
+            </div>
+          </div>
+          <div
+            class="product-card"
+            data-category="coffee"
+            data-price="11"
+            data-discount="40"
+            data-hover-img="./assets/img/6.jpg"
+            data-name="Affogato"
+            data-img="./assets/img/5.jpg"
+            data-original-price="18"
+          >
+            <div class="badge">-40%</div>
+            <div class="product-img-wrapper">
+              <img
+                src="./assets/img/5.jpg"
+                alt="Affogato"
+                class="product-img default-img"
+              />
+              <img
+                src="./assets/img/6.jpg"
+                alt="Affogato Hover"
+                class="product-img hover-img"
+              />
+            </div>
+            <h3 class="product-title">Affogato</h3>
+            <div class="price-row">
+              <div class="original">$18</div>
+              <div class="sale">$11</div>
+            </div>
+            <div class="product-actions">
+              <button class="btn add-cart">Add to cart</button>
+              <button class="btn buy-now">Buy now</button>
+            </div>
+          </div>
+          <div
+            class="product-card"
+            data-category="coffee"
+            data-price="8"
+            data-discount="10"
+            data-hover-img="./assets/img/8.jpg"
+            data-name="Espresso"
+            data-img="./assets/img/7.jpg"
+            data-original-price="9"
+          >
+            <div class="badge">-10%</div>
+            <div class="product-img-wrapper">
+              <img
+                src="./assets/img/7.jpg"
+                alt="Espresso"
+                class="product-img default-img"
+              />
+              <img
+                src="./assets/img/8.jpg"
+                alt="Espresso Hover"
+                class="product-img hover-img"
+              />
+            </div>
+            <h3 class="product-title">Espresso</h3>
+            <div class="price-row">
+              <div class="original">$9</div>
+              <div class="sale">$8</div>
+            </div>
+            <div class="product-actions">
+              <button class="btn add-cart">Add to cart</button>
+              <button class="btn buy-now">Buy now</button>
+            </div>
+          </div>
+        </div>
+        <div class="section-cta">
+          <a href="./public/menu.html" class="btn btn-primary"
+            >VIEW ALL COFFEES</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="container">
+        <h2 class="section-title lazy-load">What Our<br />Customers Said</h2>
+        <p class="section-subtitle lazy-load">
+          A coffeehouse, coffee shop, or café is an establishment that primarily
+          serves coffee of various types, e.g. espresso, latte, and cappuccino
+        </p>
+        <div class="testimonials-slider lazy-load">
+          <div class="testimonial-slide active">
+            <div class="testimonial-content">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "Brothers Cafe is my go-to spot for amazing coffee and a
+                relaxing vibe. The staff are always friendly and kind, and the
+                desserts are next-level. Whether I'm working or catching up with
+                friends and family, it's the perfect place to be."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="./assets/img/avatar1.jpg"
+                  alt="Customer"
+                  class="author-avatar"
+                />
+                <div class="author-info">
+                  <h4 class="author-name">Jane Carter</h4>
+                  <p class="author-title">Artist</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "I love the cozy atmosphere and the quality of coffee here. It's
+                become my favorite place to start my mornings. The baristas
+                really know their craft and the attention to detail is
+                impressive."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="./assets/img/avatar2.jpg"
+                  alt="Customer"
+                  class="author-avatar"
+                />
+                <div class="author-info">
+                  <h4 class="author-name">Michael Brown</h4>
+                  <p class="author-title">Business Owner</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "Excellent service and wonderful ambiance. The coffee selection
+                is fantastic and the pastries are always fresh. I highly
+                recommend this place to anyone looking for a great coffee
+                experience."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="./assets/img/avatar3.jpg"
+                  alt="Customer"
+                  class="author-avatar"
+                />
+                <div class="author-info">
+                  <h4 class="author-name">Sarah Johnson</h4>
+                  <p class="author-title">Designer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="testimonial-btn prev-testimonial">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="testimonial-btn next-testimonial">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="testimonial-dots">
+            <span class="testimonial-dot active" data-testimonial="0"></span>
+            <span class="testimonial-dot" data-testimonial="1"></span>
+            <span class="testimonial-dot" data-testimonial="2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid lazy-load">
+          <div class="stat-item">
+            <h3 class="stat-number">14 +</h3>
+            <p class="stat-label">Meeting Rooms</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number">56 +</h3>
+            <p class="stat-label">Menu Items</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number">170 k</h3>
+            <p class="stat-label">Coffee Served</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number">90 +</h3>
+            <p class="stat-label">Town Branches</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+      <div class="container">
+        <h2 class="section-title lazy-load">Our Gallery</h2>
+        <div class="gallery-grid lazy-load">
+          <div class="gallery-item">
+            <img src="./assets/img/13.jpg" alt="Coffee Shop Gallery" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/img/14.jpg" alt="Coffee Shop Gallery" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-item gallery-item-large">
+            <img src="./assets/img/15.jpg" alt="Coffee Shop Gallery" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/img/16.jpg" alt="Coffee Shop Gallery" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/img/17.jpg" alt="Coffee Shop Gallery" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" />
+      <div class="lightbox-nav">
+        <button class="lightbox-prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-columns">
+        <div class="footer-widget">
+          <h3 class="logo-text">Brothers Cafe</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> <strong>ADDRESS</strong
+            ><br />No.23, King St. Gold Ave. NY 74521
+          </p>
+          <p>
+            <i class="fas fa-phone"></i> <strong>TEL</strong><br />+1 (800) 1234
+            567
+          </p>
+          <p>
+            <i class="fas fa-phone"></i> <strong>TEL</strong><br />+1 (800) 1234
+            568
+          </p>
+        </div>
+        <div class="footer-widget">
+          <h4>Working Hours</h4>
+          <p>
+            <i class="far fa-clock"></i> <strong>OPENING HOURS</strong
+            ><br />Sunday - Thursday 9:00 AM - 12:00 AM<br />Friday Saturday
+            9:00 AM - 2:00 AM
+          </p>
+          <p>
+            <i class="fas fa-mug-hot"></i> <strong>BREAKFAST BUFFET</strong
+            ><br />Sunday - Thursday 9:00 AM - 12:00 AM<br />Friday Saturday
+            9:00 AM - 2:00 AM
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="footer-widget">
+          <h4>Our Location</h4>
+          <div class="footer-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d66218.20040396864!2d106.5716199486328!3d10.795760000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175296fc0b973a5%3A0xe6add0a532658249!2sBrothers%20Cafe!5e1!3m2!1svi!2s!4v1760364918909!5m2!1svi!2s"
+              width="100%"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="sub-footer">
+        <div class="sub-footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <a id="scrollTopBtn" href="#"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./assets/script/home.js"></script>
+  </body>
+</html>
